@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NYC 311 · 项目阅读入口</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f3f6fa;color:#243b53;font:16px/1.8 "Microsoft YaHei",sans-serif}main{max-width:1060px;margin:42px auto;padding:0 28px 40px}h1{font-size:30px;margin:0}h2{font-size:21px;margin:30px 0 12px}p{margin:8px 0;color:#526578}.links{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0}a{color:#1267af;text-decoration:none}a:hover{text-decoration:underline}.links a{padding:11px 18px;border:1px solid #d9e3ec;border-radius:6px;background:white}.links a:first-child{background:#166da9;color:white}.panel{background:white;border:1px solid #dde5ec;border-radius:8px;padding:22px;margin:18px 0}table{border-collapse:collapse;width:100%;font-size:14px}th{text-align:left;background:#edf3f8}td,th{padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ef}td:first-child{width:20%;font-weight:600}td:last-child{width:17%;white-space:nowrap}.muted{font-size:14px;color:#526578}details{margin:14px 0}summary{cursor:pointer;font-weight:600}code{font-size:13px;overflow-wrap:anywhere}@media(max-width:650px){main{padding:0 14px}.panel{padding:12px}table{font-size:12px}td,th{padding:7px}td:last-child{white-space:normal}}
+</style>
+<main><h1>NYC 311 服务请求分析</h1><p>住宅噪声与违规停车研究 · 直升机关闭记录作为异常旁例</p>
+<div class="links"><a href="NYC311分析报告.pdf">阅读报告 PDF</a><a href="https://github.com/Rainbow-bot-bot/nyc311-service-request-analysis/releases/tag/v1.0-delivery">打开成果报表</a><a href="NYC311分析报告.docx">Word 主稿</a></div>
+<p class="muted">先看报告第1页了解结果，再按下面的问题进入报表。成果报表用一页全量概览交代背景，随后按比较线索、夜间、地区渠道、一月异常、停车、集中关闭和预测展开，共10个展示页；原分析核验的独有功能也已并入，另有清洗审计和结果明细辅助页。进一步核验从“交互探索”下方进入。PBIX需要Power BI Desktop；直接阅读已保存的数据不依赖数据库，也不必刷新。完整 PBIX 请从本仓库 v1.0-delivery Release 下载。</p>
+<section class="panel"><h2 style="margin-top:0">想核验哪一个问题？</h2><table><thead><tr><th>问题</th><th>报表入口与操作</th><th>报告位置</th></tr></thead><tbody>
+<tr><td>清洗与预处理</td><td>查看下方“自动化实现”中的字段说明、质量规则和处理代码；规则如何形成、怎样保留连接键，见报告方法部分。</td><td>PDF第2—3页</td></tr>
+<tr><td>为什么收缩到这些专题</td><td>报告第2节记录从七问探索到专题收缩的过程；成果报表第01页提供全量背景，第02页保留同类机构比较线索。完整探索过程见报告与“探索过程”目录。</td><td>PDF第4—6页</td></tr>
+<tr><td>住宅噪声的周末夜间、一月峰值</td><td>成果报表 → 夜间规律、一月异常：直接查看已复核比较；需要变更条件时进入“交互探索”，选择住宅噪声，比较月趋势和热力图。</td><td>PDF第7、9页</td></tr>
+<tr><td>布朗克斯关闭周期较长</td><td>成果报表 → 地区与渠道／季度核验：比较地区、渠道和季度，再对照报告的构成调整与异常地址剔除结果。</td><td>PDF第8页</td></tr>
+<tr><td>布鲁克林停车增长</td><td>成果报表 → 停车增长：已固定2025和2026年6至8月、布鲁克林、违规停车。点击在线渠道，联动查看月份、投诉描述和提交小时。</td><td>PDF第10—11页</td></tr>
+<tr><td>直升机集中关闭</td><td>成果报表 → 集中关闭／结案核验：观察记录集中在哪些关闭日期；报告结合关闭说明解释核查重点。</td><td>PDF第12页</td></tr>
+<tr><td>预测是否有用</td><td>成果报表 → 预测核验：切换住宅噪声与违规停车，区分验证期和测试期。辅助页“结果明细”展示最终选定模型的测试结果。</td><td>PDF第14页</td></tr>
+</tbody></table></section>
+<section class="panel"><h2 style="margin-top:0">操作与统计口径</h2><p>在Desktop编辑视图中，按住Ctrl点击顶部导航。下拉筛选可以多选或清除；点击已选图表数据点可取消该选择。各页各有比较范围，切页后先看当前筛选。</p><p>工单量是提交记录数。关闭时长是记录从创建到标记关闭的自然时间，平均值和中位数分别反映整体水平与居中位置。</p><p>热力图按原提交日期与小时显示；报告的周末夜间比较把午夜后的记录归到前一晚，并除以实际夜晚数。普通地区均值、共同构成调整、剔除异常地址是三种独立比较。</p><p class="muted">数据快照：2026年9月7日，共7,525,498条。专题趋势使用2024年10月至2026年8月完整月份；全量探索保留两端不完整月份。页面中的计数随当前筛选变化。</p></section>
+<section class="panel"><h2 style="margin-top:0">检查实现与复现</h2><details><summary>探索、规则与自动化文件</summary><p><a href="探索过程/01_数据摸底.ipynb">字段摸底Notebook</a> · <a href="探索过程/02_SQL分析.ipynb">SQL探索Notebook</a> · <a href="探索过程/生成初步分析结果.sql">批量SQL</a></p><p><a href="自动化实现/字段说明.xlsx">字段说明</a> · <a href="自动化实现/数据质量规则.xlsx">数据质量规则</a> · <a href="自动化实现/自动化入库.py">自动化入库代码</a> · <a href="自动化实现/说明.md">运行说明</a></p><p>Notebook保留探索时的执行记录，部分内容使用首分片，不能把其旧输出当作全量结果。预测实验与主体分析分开，具体方法和分工见报告第9节。</p></details><details><summary>在另一台电脑上使用</summary><p>阅读：PDF或Word可直接打开；PBIX用Desktop打开即可查看保存结果。刷新：需要按运行说明配置本地数据源、MySQL和依赖。重跑：需要项目根目录的研究脚本、证据及留存的25份Parquet，交付文件夹未复制完整原数据。</p><p>原始下载程序未留存；重新从NYC Open Data获取的数据应记为新快照，不能保证与本报告逐条相同。本公开仓库保留最终交付中的可复核材料。</p></details></section>
+</main></html>
