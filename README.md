@@ -23,4 +23,4 @@
 
 ## Power BI
 
-完整 `NYC311成果展示.pbix` 约 569 MB，不进入 Git 历史。请从 [v1.0-delivery Release](https://github.com/Rainbow-bot-bot/nyc311-service-request-analysis/releases/tag/v1.0-delivery) 下载。
+完整成果报表约 569 MiB，不进入 Git 历史。请从 [v1.0-delivery Release](https://github.com/Rainbow-bot-bot/nyc311-service-request-analysis/releases/tag/v1.0-delivery) 下载 Release asset `NYC311.pbix`。
