@@ -1,0 +1,13 @@
+# Python 3.10.20。核心分析包按原建模环境固定版本；同时补充报告生成所需依赖。
+pandas==2.3.3
+numpy==2.2.5
+pyarrow==25.0.1
+PyMySQL==1.2.0
+SQLAlchemy==2.0.52
+openpyxl==3.1.5
+scikit-learn==1.7.2
+joblib==1.6.0
+threadpoolctl==3.6.0
+matplotlib==3.10.9
+python-docx==1.2.0
+pywin32==312; sys_platform == 'win32'
