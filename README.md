@@ -1,6 +1,6 @@
 # NYC 311 服务请求分析
 
-本仓库公开项目的最终交付材料。项目基于 NYC Open Data 的 311 Service Requests 数据，围绕住宅噪声、违规停车、地区差异、异常关闭记录与预测扩展进行分析。
+这是项目1的公开仓库。项目基于 NYC Open Data 的 311 Service Requests 数据，主要分析住宅噪声、违规停车、地区差异和异常关闭记录，并做了一个预测扩展。
 
 ## 项目索引
 
@@ -21,15 +21,17 @@
 
 ## 交付内容
 
-- `NYC311分析报告.pdf` / `.docx`：完整项目报告
-- `探索过程/`：数据摸底 Notebook、SQL 分析 Notebook 与批量 SQL
-- `自动化实现/`：自动化入库脚本、字段说明、数据质量规则及运行说明
-- `Power BI结果展示/`：PBIX 下载说明；完整文件放在 GitHub Release 中
+1. `NYC311分析报告.pdf` / `.docx`：项目报告
+2. `探索过程/`：数据摸底 Notebook、SQL 分析 Notebook、批量 SQL
+3. `自动化实现/`：自动化入库脚本、字段说明、数据质量规则、运行说明
+4. `Power BI结果展示/`：PBIX 下载说明；完整报表放在 GitHub Release
 
-## 数据与边界
+## 数据说明
 
-原始数据来自 NYC Open Data 311 Service Requests。本地项目使用 2026-09-07 的快照，25 份 Parquet 共 7,525,498 条记录；原始 Parquet 不随本仓库发布。项目报告中的工单量表示提交记录数，关闭时长表示系统记录的创建至关闭自然时间，不将其解释为独立现实事件数或真实问题解决耗时。
+数据来自 NYC Open Data 311 Service Requests。项目使用 2026-09-07 的本地快照，共25份 Parquet、7,525,498条记录；原始 Parquet 不上传。
+
+报告里的工单量指提交记录数，关闭时长指系统记录中的创建到关闭时长，不等同于独立现实事件数或实际问题解决耗时。
 
 ## Power BI
 
-完整成果报表约 569 MiB，不进入 Git 历史。请从 [v1.0-delivery Release](https://github.com/Rainbow-bot-bot/nyc311-service-request-analysis/releases/tag/v1.0-delivery) 下载 Release asset `NYC311.pbix`。
+PBIX 约569 MiB，不放进 Git 历史。可从 [v1.0-delivery Release](https://github.com/Rainbow-bot-bot/nyc311-service-request-analysis/releases/tag/v1.0-delivery) 下载 `NYC311.pbix`。
