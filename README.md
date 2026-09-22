@@ -17,14 +17,14 @@
 2. [开始阅读](交付成果/开始阅读.html)
 3. [探索过程](交付成果/探索过程/)
 4. [自动化实现](交付成果/自动化实现/)
-5. Power BI 成果报表：见本仓库 **Releases → v1.0-delivery**
+5. [Power BI 成果报表](https://github.com/Rainbow-bot-bot/nyc311-service-request-analysis/releases/tag/v1.0-delivery)：`NYC311.pbix`，约569 MiB
 
 ## 交付内容
 
 1. `NYC311分析报告.pdf` / `.docx`：项目报告
 2. `探索过程/`：数据摸底 Notebook、SQL 分析 Notebook、批量 SQL
 3. `自动化实现/`：自动化入库脚本、字段说明、数据质量规则、运行说明
-4. `Power BI结果展示/`：PBIX 下载说明；完整报表放在 GitHub Release
+4. `Power BI结果展示/`：PBIX 下载说明
 
 ## 数据说明
 
@@ -34,4 +34,4 @@
 
 ## Power BI
 
-PBIX 约569 MiB，不放进 Git 历史。可从 [v1.0-delivery Release](https://github.com/Rainbow-bot-bot/nyc311-service-request-analysis/releases/tag/v1.0-delivery) 下载 `NYC311.pbix`。
+`NYC311.pbix`，约569 MiB：[v1.0-delivery Release](https://github.com/Rainbow-bot-bot/nyc311-service-request-analysis/releases/tag/v1.0-delivery)
