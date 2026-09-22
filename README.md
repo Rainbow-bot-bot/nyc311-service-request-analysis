@@ -9,7 +9,7 @@
 | [项目1：NYC311 服务请求分析](https://github.com/Rainbow-bot-bot/nyc311-service-request-analysis) | 当前仓库：数据采集、清洗、SQL、专题核验、Power BI 与项目报告。 |
 | [项目2：AI 自主交付评测](https://github.com/Rainbow-bot-bot/nyc311-ai-agent-evaluation) | 使用项目1的原始数据快照，比较 AI 的分析交付质量、执行可靠性、耗时与成本。 |
 
-**项目2测验使用的数据来自项目1采集并保存的 NYC311 原始数据快照。** 两者沿用同一批25份Parquet、7,525,498条记录；项目2只读使用原始分片，不把项目1的清洗结果或研究结论当作原始输入。原始Parquet不随两个公开仓库发布，文件清单和哈希见[项目2输入清单](https://github.com/Rainbow-bot-bot/nyc311-ai-agent-evaluation/blob/main/input/data_manifest.json)。
+项目2使用项目1采集并保存的 NYC311 数据，共25份Parquet、7,525,498条记录。原始Parquet未上传，文件清单和哈希见[项目2输入清单](https://github.com/Rainbow-bot-bot/nyc311-ai-agent-evaluation/blob/main/input/data_manifest.json)。
 
 ## 建议阅读顺序
 
